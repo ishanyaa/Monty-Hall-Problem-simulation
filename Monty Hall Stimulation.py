@@ -6,11 +6,11 @@
 
 import random
 
-def monty_hall_simulation(num_simulations):
+def monty_hall_stimulation(num_stimulations):
     stay_wins = 0
     switch_wins = 0
     
-    for _ in range(num_simulations):
+    for _ in range(num_stimulations):
         prize_door = random.randint(1, 3)
         contestant_choice = random.randint(1, 3)
         
@@ -25,14 +25,14 @@ def monty_hall_simulation(num_simulations):
         stay_wins += (contestant_choice == prize_door)
         switch_wins += (switch_door == prize_door)
             
-    stay_win_percentage = (stay_wins / num_simulations) * 100
-    switch_win_percentage = (switch_wins / num_simulations) * 100
+    stay_win_percentage = (stay_wins / num_stimulations) * 100
+    switch_win_percentage = (switch_wins / num_stimulations) * 100
     
-    print(f"Results after {num_simulations} simulations:")
+    print(f"Results after {num_stimulations} stimulations:")
     print(f"Staying wins: {stay_wins} times ({stay_win_percentage:.2f}%)")
     print(f"Switching wins: {switch_wins} times ({switch_win_percentage:.2f}%)")
 
 if __name__ == "__main__":
-    num_simulations = int(input("Enter the number of simulations: "))
-    monty_hall_simulation(num_simulations)
+    num_stimulations = int(input("Enter the number of stimulations: "))
+    monty_hall_stimulation(num_stimulations)
 
